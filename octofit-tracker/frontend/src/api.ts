@@ -4,7 +4,7 @@ export const apiBaseUrl = codespaceName
   : 'http://localhost:8000';
 
 export function getApiEndpoint(resource: string) {
-  return `${apiBaseUrl}/api/${resource}`;
+  return `${apiBaseUrl}/${resource}`;
 }
 
 export function normalizeCollectionResponse<T>(payload: unknown): T[] {
