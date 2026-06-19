@@ -8,7 +8,7 @@ function Activities() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch(getApiEndpoint('/api/activities'))
+    fetch(getApiEndpoint('/api/activities/'))
       .then((response) => response.json())
       .then((data) => {
         setActivities(normalizeCollectionResponse<Activity>(data));
