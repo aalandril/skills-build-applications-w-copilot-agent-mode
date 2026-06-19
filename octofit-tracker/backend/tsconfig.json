@@ -12,7 +12,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noImplicitAny": true,
-    "allowImportingTsExtensions": true
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "ignoreDeprecations": "6.0"
   },
   "include": ["src"]
 }
