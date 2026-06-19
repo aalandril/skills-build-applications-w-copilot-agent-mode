@@ -1,0 +1,26 @@
+:root {
+  font-family: Inter, sans-serif;
+  color: #111827;
+  background: #f8fafc;
+}
+
+body, html, #root {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+main {
+  text-align: center;
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
+}
