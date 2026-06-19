@@ -7,8 +7,10 @@ function Users() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  const endpointPath = '/api/users/';
+
   useEffect(() => {
-    fetch(getApiEndpoint('users'))
+    fetch(getApiEndpoint(endpointPath))
       .then((response) => response.json())
       .then((data) => {
         setUsers(normalizeCollectionResponse<User>(data));

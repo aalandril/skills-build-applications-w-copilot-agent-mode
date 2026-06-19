@@ -7,8 +7,10 @@ function Workouts() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  const endpointPath = '/api/workouts/';
+
   useEffect(() => {
-    fetch(getApiEndpoint('workouts'))
+    fetch(getApiEndpoint(endpointPath))
       .then((response) => response.json())
       .then((data) => {
         setWorkouts(normalizeCollectionResponse<Workout>(data));

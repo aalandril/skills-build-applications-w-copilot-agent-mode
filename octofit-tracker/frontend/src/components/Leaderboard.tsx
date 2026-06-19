@@ -7,8 +7,10 @@ function Leaderboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  const endpointPath = '/api/leaderboard/';
+
   useEffect(() => {
-    fetch(getApiEndpoint('leaderboard'))
+    fetch(getApiEndpoint(endpointPath))
       .then((response) => response.json())
       .then((data) => {
         setEntries(normalizeCollectionResponse<LeaderboardEntry>(data));

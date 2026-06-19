@@ -7,8 +7,10 @@ function Teams() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  const endpointPath = '/api/teams/';
+
   useEffect(() => {
-    fetch(getApiEndpoint('teams'))
+    fetch(getApiEndpoint(endpointPath))
       .then((response) => response.json())
       .then((data) => {
         setTeams(normalizeCollectionResponse<Team>(data));
